@@ -1,3 +1,3 @@
 # ASCIIFY
 
-ASCIIFY is an open-source command line tool that converts images into ASCII art.
+ASCIIFY is a simple python script for converting images into ASCII art.
