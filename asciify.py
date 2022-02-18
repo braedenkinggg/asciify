@@ -1,6 +1,8 @@
 import cv2
 import sys
 
+import pathlib
+
 def to_grayscale(img):
     return cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
@@ -27,16 +29,15 @@ def map_pixels_to_chars(chars):
 
     return pixel_char_map
 
-def asciify(img_path, new_width=75):
+def asciify_img(img_path, new_width=75):
     img = cv2.imread(img_path)
+
+    if img is None:
+        sys.exit(f'{img_path} not found')
+
     img = to_grayscale(img)
     img = scale_img(img, new_width)
-
-    char_map = map_pixels_to_chars('.*o!?>O#@')
-
-    if img is None: 
-        print(f"{sys.argv[1]} not found")
-        sys.exit(1)
+    char_map = map_pixels_to_chars('.*o+?>O#@')
 
     asciified_img = ''
     for i in img:
@@ -48,7 +49,7 @@ def asciify(img_path, new_width=75):
 
     return print(asciified_img)
 
-if __name__ == '__main__':
+def main():
     if len(sys.argv) != 2:
         print("""
             ================= ASCIIFY =================
@@ -62,6 +63,9 @@ if __name__ == '__main__':
             Version: 1.0.0
         """)
     else:
-        asciify(sys.argv[1])
+        asciify_img(sys.argv[1])
         
     sys.exit(0)
+
+if __name__ == '__main__':
+    main()
