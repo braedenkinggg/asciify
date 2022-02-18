@@ -6,6 +6,7 @@ ASCIIFY is a simple open-source python script for converting images into ASCII a
 
 * [Installation](#installation)
 * [Usage](#usage) 
+* [Examples](#examples)
 
 
 ## Installation
