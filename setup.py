@@ -13,7 +13,7 @@ setup(
     python_requires = '>=3.9',
     entry_points = '''
         [console_scripts]
-        asciify=asciify:main
+        asciify=asciify.asciify:main
     ''',
     author = 'Braeden King',
     keywords = 'python, opencv, ascii-art,  ascii',

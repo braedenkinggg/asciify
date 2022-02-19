@@ -1,0 +1,1 @@
+from .asciify import main
