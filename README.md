@@ -15,6 +15,7 @@ ASCIIFY is a simple open-source python script for converting images into ASCII a
 $ git clone https://github.com/braedenkinggg/asciify.git
 $ cd asciify
 $ python setup.py install
+$ pip install open-cv
 ```
 
 ## Usage
